@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/backup"
+        android:icon="@drawable/share"
+        android:title="Share"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="Delete"
+        android:id="@+id/delete_item_button"
+        android:icon="@drawable/deletepic"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:icon="@drawable/share"
+        android:title="Set"
+        android:id="@+id/set_tool_button"
+        app:showAsAction="ifRoom"/>
+
+</menu>
