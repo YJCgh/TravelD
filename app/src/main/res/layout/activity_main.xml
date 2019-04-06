@@ -10,7 +10,6 @@
         android:id="@+id/getPersonalInf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:text="输入个人偏好" />
 
 
@@ -18,22 +17,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/getStartTime"
-        android:layout_marginTop="5dp"
         android:text="输入出发时间"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/getEndTime"
-        android:layout_marginTop="5dp"
         android:text="输入结束时间"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:id="@+id/getAimLocation"
-        android:text="获取目的地"
-        />
+        android:text="获取目的地" />
+
+
 
 </LinearLayout>

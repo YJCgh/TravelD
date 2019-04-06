@@ -1,6 +1,7 @@
 package com.example.traveld;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
@@ -25,24 +26,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private AlertDialog alertDialog; //多选框
 
-    private Button getPerInf;
-    private Button getStartTime;
-    private Button getEndTime;
-    private Button getAimLocation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getPerInf = (Button) findViewById(R.id.getPersonalInf);
+        Button getPerInf = (Button) findViewById(R.id.getPersonalInf);
         getPerInf.setOnClickListener(this);
-        getStartTime = (Button) findViewById(R.id.getStartTime);
+        Button getStartTime = (Button) findViewById(R.id.getStartTime);
         getStartTime.setOnClickListener(this);
-        getEndTime = (Button) findViewById(R.id.getEndTime);
+        Button getEndTime = (Button) findViewById(R.id.getEndTime);
         getEndTime.setOnClickListener(this);
-        getAimLocation = (Button) findViewById(R.id.getAimLocation);
+        Button getAimLocation = (Button) findViewById(R.id.getAimLocation);
         getAimLocation.setOnClickListener(this);
+
+
 
     }
 
@@ -54,12 +54,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this,"获取个人偏好",Toast.LENGTH_SHORT).show();
 
                 //alertDialog.show();
+                break;
             case R.id.getStartTime:
-                setContentView(R.layout.data_choose_main);
+                Intent intent = new Intent(MainActivity.this, DatePickActivity.class);
+                startActivity(intent);
+                break;
             case R.id.getEndTime:
                 Toast.makeText(this,"获取结束时间",Toast.LENGTH_SHORT).show();
+                break;
             case R.id.getAimLocation:
                 Toast.makeText(this,"获取目的地城市",Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
